@@ -1,0 +1,560 @@
+*{
+// font-family: "微软雅黑";
+}
+body{
+	color: #333;
+}
+.hmain{
+	position: absolute;
+	left: 20px;
+	top: 75px;
+	right: 20px;
+	bottom: 0;
+}
+.ivu-btn{
+	border-radius: 2px;
+}
+.ivu-input-wrapper{
+	margin-right: 10px;
+	input.ivu-input{
+		border-radius: 2px!important;
+	}
+	i,input{
+		height: 34px;
+		line-height: 34px;
+	}
+	input{
+		border: 1px solid #e1e1e1;
+		padding-left: 15px;
+		color: #333;
+		font-size: 12px;
+	}
+	input:focus{
+	    box-shadow: 0 0 0 1px rgba(45,140,240,.2);
+	}
+	input::-webkit-input-placeholder{
+		font-size: 12px;
+		color: #999;
+	}
+	input::-moz-input-placeholder{
+		font-size: 12px;
+		color: #999;
+	}
+	input::-o-input-placeholder{
+		font-size: 12px;
+		color: #999;
+	}
+	input::-ms-input-placeholder{
+		font-size: 12px;
+		color: #999;
+	}
+}
+textarea.ivu-input{
+	padding-left: 15px;
+	font-size: 12px;
+	// color: #999;
+	border-radius: 2px;
+}
+.ivu-form-item-content {
+    .ivu-btn{
+        border-radius: 2px!important;
+        border: none;
+        width: 80px;
+        height: 34px;
+    }
+    .ivu-btn-ghost{
+        border: 1px solid #E1E1E1;
+        margin-right: 50px;
+    }
+}
+.ivu-date-picker{
+    margin-right: 10px;
+}
+.ivu-select{
+	border-color: #e1e1e1;
+	font-size: 12px;
+	.ivu-select-selection{
+		border-radius: 2px;
+        height: 34px;
+		line-height: 34px;
+		.ivu-select-placeholder{
+			height: 32px;
+			line-height: 32px;
+			color: #999;
+			text-align: left;
+			padding-left: 15px;
+		}
+		.ivu-select-selected-value{
+			height: 32px;
+			line-height: 32px;
+			color: #333;
+			padding-left: 15px;
+		}
+	}
+	.ivu-select-arrow{
+		color: #999;
+	}
+}
+.ivu-table{
+	color: #333333;
+}
+.ivu-table-wrapper{
+	border: none;
+    td{
+        border-right: none;
+    }
+	.ivu-table-header{
+		span{
+			font-size: 14px;
+			color: #333;
+			font-weight: bold;
+		}
+		th{
+			background: #fff;
+			border-bottom: 1px solid #d7d7d7;
+			border-right: none;
+			height: 50px;
+		}
+	}
+	.ivu-table-body{
+	    table{
+	        // min-width: 1000px;
+	    }
+		span{
+			font-size: 14px;
+			color: #333;
+		}
+		td{
+			border-bottom: 1px solid #f0f0f0;
+			border-right: none;
+			height: 45px;
+		}
+	}
+	.ivu-table-cell{
+		button{
+			span{
+				color: #fff;
+			}
+		}
+		.ivu-switch-inner{
+			span{
+				font-size: 12px!important;
+				color: #fff;
+			}
+		}
+	}
+	.ivu-checkbox-wrapper{
+		margin-right: 0
+	}
+	.ivu-table-cell{
+		padding: 0;
+	}
+	.ivu-table:before,.ivu-table:after{
+		width: 0;
+	}
+	tr.ivu-table-row-hover td{
+		background-color: #f5f5f5;
+	}
+}
+.ivu-page{
+	text-align: right;
+	display: inline-block;
+    float: right;
+	.ivu-page-total,.ivu-page-item-jump-next, .ivu-page-item-jump-prev, .ivu-page-next, .ivu-page-prev,.ivu-page-item{
+		height: 34px;
+		line-height: 34px;
+		border: none;
+		border-radius: 2px;
+	}
+	.ivu-page-options{
+		.ivu-select-selected-value{
+			height: 34px;
+			line-height: 34px;
+		}
+	}
+	.ivu-page-options-elevator{
+		height: 34px;
+		input{
+			height: 34px;
+			line-height: 34px;
+			text-align: center;
+			border-radius: 2px;
+		}
+	}
+}
+.ivu-form{
+	.ivu-form-item-label{
+		padding-right: 40px;
+	}
+}
+.ivu-modal-content{
+	border-radius: 2px;
+}
+.hasChoose{
+	margin-top: 24px;
+}
+.pageFooter{
+	display: flex;
+	justify-content: space-between;
+	button{
+		height: 34px;
+	}
+}
+.ivu-tooltip-inner{
+	white-space: initial!important;
+}
+
+//App.vue
+@color_1: #9ea7b4;
+@color_2: #fafafa;
+@color_3: #FFFFFF;
+@color_4: #9ba7b5;
+@color_5: #4B8CF0;
+@color_6: #666;
+
+.layout {
+	background: #f0f0f0;
+	position: relative;
+	overflow: hidden;
+	min-width: 1200px;
+}
+.layout-breadcrumb {
+    >span:last-child{
+        font-weight: 500 !important;
+        color: #333333 !important;
+    }
+//  .ivu-breadcrumb-item-separator:before{
+//      content: '>';
+//  }
+	padding: 30px 30px;
+	display: inline-block;
+}
+.layout-content {
+	margin: 20px 20px 0 20px;
+	overflow: hidden;
+	background: #fff;
+	.layout-content-main{
+//	    min-width: 1000px;
+	}
+	// border: 1px solid #E1E1E1;
+}
+.layout-copy {
+	text-align: center;
+	padding: 10px 0 20px;
+	color: @color_1;
+}
+.layout-menu-left {
+	background: #313747;
+//	width: 180px;
+	color: @color_2;
+	.ivu-layout-sider{
+//	    width: 180px !important;
+//	    min-width: 180px !important;
+//	    max-width: 180px !important;
+//	    flex: 0 0 180px !important;
+	}
+	.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover{
+	    background: #2B2F3B !important;
+	}
+	.li-div-1{
+            .ivu-menu-submenu-title:hover{
+                i.layout-menu-left-i-1{
+                    background: url(../img/tableMonitorSelected.png);
+                }
+            }
+        }
+        .li-div-2{
+            .ivu-menu-submenu-title:hover{
+                i.layout-menu-left-i-2{
+                    background: url(../img/sysytemManageSelected.png);
+                }
+            }
+        }
+        .li-div-3{
+            .ivu-menu-submenu-title:hover{
+                i.layout-menu-left-i-3{
+                    background: url(../img/borderSelected.png);
+                }
+            }
+        }
+        .li-div-4{
+            .ivu-menu-submenu-title:hover{
+                i.layout-menu-left-i-4{
+                    background: url(../img/serverManageSelected.png);
+                }
+            }
+        }
+        .li-div-5{
+            .ivu-menu-submenu-title:hover{
+                i.layout-menu-left-i-5{
+                    background: url(../img/loManageSelected.png);
+                }
+            }
+        }
+        .li-div-6{
+            .ivu-menu-submenu-title:hover{
+                i.layout-menu-left-i-6{
+                    background: url(../img/rootManageSelected.png);
+                }
+            }
+        }
+        .ivu-menu-submenu{
+            i.layout-menu-left-i{
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+            }
+            i.layout-menu-left-i-1{
+                background: url(../img/tableMonitor.png);
+            }
+            i.layout-menu-left-i-2{
+                background: url(../img/systemManage.png);
+            }
+            i.layout-menu-left-i-3{
+                background: url(../img/border.png);
+            }
+            i.layout-menu-left-i-4{
+                background: url(../img/serverManage.png);
+            }
+            i.layout-menu-left-i-5{
+                background: url(../img/logManage.png);
+            }
+
+            i.layout-menu-left-i-6{
+                background: url(../img/rootManage.png);
+            }
+        }
+}
+.layout-header {
+	height: 55px;
+	background: #fff;
+	border: 1px solid #E1E1E1;
+	width: 100%;
+	.ivu-btn-text {
+		border-radius: 0;
+		width: 55px;
+		height: 55px;
+		border-right: 1px solid #f5f5f5;
+	}
+}
+.layout-logo-left {
+	text-align: center;
+	font-size: 1.14em;
+	color: @color_3;
+	line-height: 55px;
+	height: 55px;
+	background: #4b8cf0;
+}
+.layout-ceiling-main {
+	a {
+		color: @color_4;
+	}
+}
+.layout-hide-text {
+	.layout-text {
+		display: none;
+	}
+}
+.ivu-col {
+	transition: width .2s ease-in-out;
+}
+.ivu-menu-dark.ivu-menu-vertical {
+    background: #313747;
+	.ivu-menu-opened {
+		background: #2b2f3b !important;
+		.ivu-menu-submenu-title {
+			background: #313747 !important;
+		}
+	}
+	.ivu-menu-submenu {
+		.ivu-menu-item {
+			&:hover {
+				background: #313747 !important;
+			}
+		}
+		.ivu-menu-item-active {
+			color: @color_5 !important;
+			background: #2B2F3B !important;
+		}
+	}
+	.ivu-menu-submenu-title {
+		&:hover {
+			background: #4B8CF0 !important;
+		}
+	}
+}
+//.ivu-tabs-nav-scroll {
+//	background: #f8f8f9;
+//	height: 50px;
+//}
+.ivu-tabs.ivu-tabs-card {
+    .ivu-tabs-content{
+        transform: none !important;
+    }
+    .subTabNav-1{
+       .ivu-tabs-nav-scroll {
+            background: #FFFFFF;
+        }
+        .nav-text.ivu-tabs-nav{
+            border-bottom: 1px solid #E1E1E1;
+            color: #c1c3c7;
+            .ivu-tabs-tab{
+                padding: 12.5px 16px;
+            }
+        }
+    }
+    .subTabNav-2{
+       .ivu-tabs-nav-scroll {
+            background: #FFFFFF;
+        }
+        .nav-text.ivu-tabs-nav{
+            border-bottom: 1px solid #E1E1E1;
+        }
+    }
+    .ivu-tabs-nav-scroll {
+        background: #f8f8f8;
+        height: 50px;
+        .ivu-tabs-ink-bar{
+            bottom: 0;
+        }
+    }
+	>.ivu-tabs-bar {
+	    margin-bottom: 0;
+		.ivu-tabs-tab {
+			margin: 0;
+			height: 48px;
+			width: 180px;
+			line-height: 40px;
+			border: none;
+			text-align: center;
+			border-radius: 0;
+			font-size: 1.14em;
+		}
+		.ivu-tabs-nav-container {
+			height: 48px;
+			.nav-text{
+			    width: 100%;
+			    height: 48px;
+			    border-bottom: 1px solid #E1E1E1;
+			    .ivu-tabs-tab{
+			        height: 47px;
+			    }
+			    .ivu-tabs-tab-active{
+			        height: 48px;
+			        border-bottom: 1px solid #FFFFFF;
+			    }
+			}
+		}
+		.ivu-tabs-tab-active {
+			border-right: 1px solid #E1E1E1;
+			border-left: 1px solid #E1E1E1;
+		}
+	}
+}
+.ivu-tabs-nav-wrap {
+	.ivu-tabs-nav-scroll {
+		height: initial;
+		color: @color_6;
+	}
+}
+.ivu-breadcrumb {
+	a {
+		color: @color_5;
+	}
+}
+.subTabNav-1{
+    .ivu-tabs-tabpane{
+        &:not(:first-child){
+            display: none;
+        }
+    }
+}
+.ivu-tabs .ivu-tabs-tabpane{
+    &.pane1{
+        display: none;
+    }
+//  &.pane2{
+//      width: auto;
+//  }
+//  &.pane3{
+//      width: 100%;
+////      flex-shrink: 1;
+//  }
+////  width: initial;
+    .ivu-tabs-bar{
+        margin: 0 30px;
+    }
+    .ivu-tabs-nav-scroll {
+        .ivu-tabs-nav{
+            color: #999999;
+            float: none;
+            .ivu-tabs-tab {
+                padding: 12.5px 16px;
+            }
+            .ivu-tabs-ink-bar{
+                transition: auto;
+            }
+        }
+    }
+}
+//相同的组件样式
+button.defaultButton{
+    background: #7dbcff;
+    border-radius: 2px;
+    border: none;
+    &:hover{
+        background: #3796ff;
+    }
+}
+.tableOperaHover{
+    &:hover{
+        color: #4a8df1 !important;
+    }
+}
+.closeIcon{
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    background: url(../img/closeIcon.png);
+    width: 38px;
+    height: 38px;
+}
+
+.ivu-modal-content{
+    border-radius: 3px;
+    .ivu-modal-confirm{
+        padding: 0;
+        .ivu-modal-confirm-head{
+            height: 34px;
+            line-height: 34px;
+            border-bottom: 1px solid #E1E1E1;
+            text-indent: 10px;
+            .ivu-modal-confirm-head-title{
+                font-weight: 500;
+            }
+        }
+    }
+    .ivu-modal-body{
+        padding: 0 0 16px 0;
+        .ivu-icon-help-circled{
+            display: none;
+        }
+        .ivu-modal-confirm-body{
+            padding-left: 0;
+            text-align: center;
+            font-size: 14px;
+            color: #fa5555;
+        }
+        .ivu-modal-confirm-footer{
+            margin-right: 24px;
+            .ivu-btn-text{
+                border: 1px solid #E1E1E1;
+                margin-right: 12px;
+            }
+            .ivu-btn-large{
+                padding: 3px 12px;
+                border-radius: 2px;
+            }
+        }
+    }
+}
